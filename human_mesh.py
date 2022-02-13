@@ -88,8 +88,8 @@ class HumanMesh(Agent):
         per = random.randint(1,102)
         ## pick a random fit 1-45 (sm.pkl)
         fit = random.randint(1,45)
-        ## path = fits/pn/sm.pkl
-        path = os.path.join("/home/sashawald/bodies-uncovered/fits",("p{:03d}".format(per)),"s{:02d}.pkl".format(fit))
+        FITS_PATH = "/home/sashawald/bodies-uncovered/fits"
+        path = os.path.join(FITS_PATH,("p{:03d}".format(per)),"s{:02d}.pkl".format(fit))
         print("Using fit: "+path)
         pkl_fit = pickle.load(open(path, 'rb'))
        
